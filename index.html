@@ -13,41 +13,76 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- FONT
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
-
   <!-- CSS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/skeleton.css">
  <link rel="stylesheet" href="css/style.css">
  
-  <!-- Favicon
+<!-- Owl Carousel CSS -->
+<link rel="stylesheet" href="owlcarousel/assets/owl.carousel.min.css">
+<link rel="stylesheet" href="owlcarousel/assets/owl.theme.default.min.css">
+<!-- jQuery -->
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<!-- Owl Carousel JS -->
+<script src="owlcarousel/owl.carousel.min.js"></script>
+ 
+<!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link rel="icon" type="image/png" href="images/favicon.png">
 
 </head>
 <body>
 
-  <!-- Common Style
+  <!-- Header
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<header>
+<div class="container" id="header_in">
+  <div class="row">
+    <div class="six columns" id="logo">
+      <img class="u-max-full-width" src="images/top_sp/logo.png" alt="APPLE BERRY made with B" srcset="images/top_sp/logo@2x.png 2x" />
+    </div>
+    <div class="six columns nav">
+      <ul class="sp_navi">
+        <li><a href="#navi_click"><img src="images/top_sp/menu_icon.png" alt="menu_icon" srcset="images/top_sp/menu_icon@2x.png 2x" /></a></li>
+        <li><a href="#"><img src="images/top_sp/fb.png" alt="facebook" srcset="images/top_sp/fb@2x.png 2x" /></a></li>
+        <li><a href="#"><img src="images/top_sp/insta.png" alt="instagram" srcset="images/top_sp/insta@2x.png 2x" /></a></li> 
+      </ul><!-- sp_nav -->
+      
+      <ul class="sp_navi_hide pc_nav">
+        <li><a href="#">LOGIN</a></li>
+        <li><a href="#">CART</a></li>
+        <li><a href="#">MY PAGE</a></li>
+        <li><a href="#">SHOPPING GUIDE</a></li>
+      </ul><!-- sp_nav_hide, pc_nav -->
+    </div><!-- nav -->
+  </div> <!-- row -->
+</div> <!-- header_in -->
+</header><!-- header -->
 
-  
-   <!-- Footer
+
+  <!-- main
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <div class="container">
     <div class="row">
-      <div class="one-half column" style="margin-top: 25%">
-        <h4>Basic Page</h4>
-        <p>This index.html page is a placeholder with the CSS, font and favicon. It's just waiting for you to add some content! If you need some help hit up the <a href="http://www.getskeleton.com">Skeleton documentation</a>.</p>
+      <div class="nine colums" id="main">
+       <div class="main_in">
+        <div class="owl-carousel owl-theme" id="eyecatch">
+          <div>アイキャッチ写真</div>
+          <div>アイキャッチ写真</div>
+          <div>アイキャッチ写真</div>
+          <div>アイキャッチ写真</div>
+        </div><!-- eyecatch area -->
       </div>
-    </div>
-  </div>
-
- <!-- Primary Page Layout
+      </div><!-- main -->
+       <div class="three colums" id="sidebar">
+        
+      </div><!-- sidebar -->
+    </div><!-- row -->
+  </div><!-- container -->
+  
+   <!-- Footer
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-<!-- End Document
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  
 </body>
 </html>

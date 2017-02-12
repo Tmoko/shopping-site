@@ -1,6 +1,102 @@
 @charset "utf-8";
 
 /* Common Style */
+
+//font-size
+
 html{
     font-size: 62.5%;
+}
+
+@mixin font-size($size: 24, $base: 10){
+    font-size:$size +px;
+    font-size:($size / $base) * 1rem;
+}
+
+$ja_font : "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", メイリオ, Verdana, "ＭＳ Ｐゴシック", sans-serif;
+$baseGray1 : #f9f8f6 ;
+$baseGray2 : #e2ddd4;
+$subGray1 : #b0b0b0;
+$subGray2 : #887f69;
+$red : #9d1a2d;
+
+/* header */
+header{
+    background: $baseGray1;
+    
+    #header_in{
+    padding:30px 0 20px 0;
+    }
+
+    #logo{
+        padding-bottom: 10px;
+        
+            img{display: block;
+                width:140px;
+                 margin:0 auto;
+            }
+    }
+    
+    .nav{
+        text-align:center;
+        height:24px;
+
+    }
+        
+    ul{
+        list-style-type: none;
+
+        li{
+            color:$subGray2;
+           display: inline-block;
+           margin-right:10px;
+           :last-child{
+               margin-right:0;
+           }
+            a{text-decoration:none;
+            }
+        
+        img{
+            width:24px;
+            height:24px;
+    
+            }
+        }
+    }
+ 
+ //トグルメニュークリックであらわれるナビ
+    .nav{
+        position: relative;
+        
+    .sp_navi_hide{
+        position:absolute;
+        top:40px;
+        display: block;
+        width:100%;
+        background:$baseGray2;
+        display:none; //sp時消去
+        
+        li{
+            display:block;
+            width:100%;
+            margin:0 auto;
+            padding:3px;
+            border-bottom:solid 1px ;
+        }
+            a{
+                color:$baseGray1;
+                pointer:cursor;
+                
+            }
+      }
+    }
+    
+    @media
+    
+
+}//header
+
+
+#eyecatch{
+    
 }
