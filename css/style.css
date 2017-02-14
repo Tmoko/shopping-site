@@ -1,51 +1,298 @@
-/*
-Error: Invalid CSS after "    @media": expected media query (e.g. print, screen, print and screen), was "}//header"
-        on line 97 of style.scss
+@charset "UTF-8";
+/* Common Style */
+html {
+  font-size: 62.5%;
+  color: #524c3e; }
 
-92:     }
-93:     
-94:     @media
-95:     
-96: 
-97: }//header
-98: 
-99: 
-100: #eyecatch{
-101:     
-102: }
+h1, h2, h3 {
+  margin: 0;
+  padding: 0; }
 
-Backtrace:
-style.scss:97
-/usr/local/rvm/gems/ruby-2.3.0/gems/sass-3.4.23/lib/sass/scss/parser.rb:1207:in `expected'
-/usr/local/rvm/gems/ruby-2.3.0/gems/sass-3.4.23/lib/sass/scss/parser.rb:1137:in `expected'
-/usr/local/rvm/gems/ruby-2.3.0/gems/sass-3.4.23/lib/sass/scss/parser.rb:1117:in `expr!'
-/usr/local/rvm/gems/ruby-2.3.0/gems/sass-3.4.23/lib/sass/scss/parser.rb:409:in `media_directive'
-/usr/local/rvm/gems/ruby-2.3.0/gems/sass-3.4.23/lib/sass/scss/parser.rb:222:in `special_directive'
-/usr/local/rvm/gems/ruby-2.3.0/gems/sass-3.4.23/lib/sass/scss/parser.rb:197:in `directive'
-/usr/local/rvm/gems/ruby-2.3.0/gems/sass-3.4.23/lib/sass/scss/parser.rb:685:in `block_child'
-/usr/local/rvm/gems/ruby-2.3.0/gems/sass-3.4.23/lib/sass/scss/parser.rb:677:in `block_contents'
-/usr/local/rvm/gems/ruby-2.3.0/gems/sass-3.4.23/lib/sass/scss/parser.rb:666:in `block'
-/usr/local/rvm/gems/ruby-2.3.0/gems/sass-3.4.23/lib/sass/scss/parser.rb:658:in `ruleset'
-/usr/local/rvm/gems/ruby-2.3.0/gems/sass-3.4.23/lib/sass/scss/parser.rb:684:in `block_child'
-/usr/local/rvm/gems/ruby-2.3.0/gems/sass-3.4.23/lib/sass/scss/parser.rb:677:in `block_contents'
-/usr/local/rvm/gems/ruby-2.3.0/gems/sass-3.4.23/lib/sass/scss/parser.rb:125:in `stylesheet'
-/usr/local/rvm/gems/ruby-2.3.0/gems/sass-3.4.23/lib/sass/scss/parser.rb:41:in `parse'
-/usr/local/rvm/gems/ruby-2.3.0/gems/sass-3.4.23/lib/sass/engine.rb:406:in `_to_tree'
-/usr/local/rvm/gems/ruby-2.3.0/gems/sass-3.4.23/lib/sass/engine.rb:381:in `_render_with_sourcemap'
-/usr/local/rvm/gems/ruby-2.3.0/gems/sass-3.4.23/lib/sass/engine.rb:298:in `render_with_sourcemap'
-/usr/local/rvm/gems/ruby-2.3.0/gems/sass-3.4.23/lib/sass/plugin/compiler.rb:492:in `update_stylesheet'
-/usr/local/rvm/gems/ruby-2.3.0/gems/sass-3.4.23/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
-/usr/local/rvm/gems/ruby-2.3.0/gems/sass-3.4.23/lib/sass/plugin/compiler.rb:209:in `each'
-/usr/local/rvm/gems/ruby-2.3.0/gems/sass-3.4.23/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
-/usr/local/rvm/gems/ruby-2.3.0/gems/sass-3.4.23/lib/sass/plugin/compiler.rb:473:in `on_file_changed'
-/usr/local/rvm/gems/ruby-2.3.0/gems/sass-3.4.23/lib/sass/plugin/compiler.rb:331:in `block in watch'
-/usr/local/rvm/gems/ruby-2.3.0/gems/sass-3.4.23/vendor/listen/lib/listen/listener.rb:252:in `on_change'
-/usr/local/rvm/gems/ruby-2.3.0/gems/sass-3.4.23/vendor/listen/lib/listen/listener.rb:290:in `block in initialize_adapter'
-/usr/local/rvm/gems/ruby-2.3.0/gems/sass-3.4.23/vendor/listen/lib/listen/adapter.rb:254:in `report_changes'
-/usr/local/rvm/gems/ruby-2.3.0/gems/sass-3.4.23/vendor/listen/lib/listen/adapter.rb:323:in `poll_changed_directories'
-/usr/local/rvm/gems/ruby-2.3.0/gems/sass-3.4.23/vendor/listen/lib/listen/adapter.rb:299:in `block in start_poller'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: Invalid CSS after \"    @media\": expected media query (e.g. print, screen, print and screen), was \"}//header\"\A         on line 97 of style.scss\A \A 92:     }\A 93:     \A 94:     @media\A 95:     \A 96: \A 97: }//header\A 98: \A 99: \A 100: #eyecatch{\A 101:     \A 102: }"; }
+p, dl, dt, dd, ul, li {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+a {
+  text-decoration: none;
+  color: #524c3e; }
+
+/* header　ページ共通部分ここから
+----------------------------------------*/
+header {
+  background: #f9f8f6; }
+  header #header_in {
+    padding: 30px 0 0 0; }
+  header #logo {
+    padding-bottom: 10px; }
+    header #logo img {
+      display: block;
+      width: 140px;
+      margin: 0 auto; }
+  header .nav {
+    text-align: center; }
+  header ul {
+    margin-bottom: 0; }
+    header ul li {
+      display: inline-block;
+      margin-right: 10px; }
+      header ul li :last-child {
+        margin-right: 0; }
+      header ul li img {
+        width: 24px;
+        height: 24px; }
+  @media (max-width: 550px) {
+    header .nav .pc_nav {
+      display: none; } }
+  @media (min-width: 550px) {
+    header .nav {
+      text-align: right; }
+      header .nav ul {
+        font-weight: bold; }
+      header .nav .sp_nav {
+        display: none; } }
+
+/*header ページ共通部分ここまで
+----------------------------------------*/
+/* main
+----------------------------------------*/
+main {
+  background: #f9f8f6;
+  line-height: 1.2;
+  letter-spacing: 0.2rem;
+ /* main areaページ共通部分ここから
+----------------------------------------*/ }
+  main #eyecatch {
+    display: block; }
+  main #new_item {
+    width: 100%;
+    display: block;
+    background: #f9f8f6; }
+    main #new_item .title {
+      width: 50%;
+      display: block;
+      margin: 0 auto;
+      padding: 20px 0;
+      width: 35%; }
+    main #new_item .new_item_in {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between; }
+      main #new_item .new_item_in .item {
+        width: 49%;
+        height: auto;
+        background: #fff;
+        padding: 2% 2% 4%;
+        margin-bottom: 2%;
+        box-sizing: border-box; }
+        main #new_item .new_item_in .item img {
+          width: 100%; }
+        main #new_item .new_item_in .item span {
+          letter-spacing: -0.01rem; }
+  @media (min-width: 550px) {
+    main #new_item .title {
+      width: 50%;
+      display: block;
+      margin: 0 auto;
+      padding: 20px 0;
+      width: 20%; }
+    main #new_item .new_item_in {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between; }
+      main #new_item .new_item_in .item {
+        width: 33%;
+        background: #fff;
+        padding: 2%;
+        margin-bottom: 0.5%;
+        box-sizing: border-box; }
+        main #new_item .new_item_in .item img {
+          width: 100%; }
+        main #new_item .new_item_in .item span {
+          letter-spacing: 0; } }
+  main #popular_item {
+    width: 100%;
+    display: block;
+    background: #f9f8f6; }
+    main #popular_item .title {
+      width: 50%;
+      display: block;
+      margin: 0 auto;
+      padding: 20px 0; }
+    main #popular_item .popular_item_in {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between; }
+      main #popular_item .popular_item_in .item {
+        width: 49%;
+        height: auto;
+        background: #fff;
+        padding: 2%;
+        margin-bottom: 2%;
+        box-sizing: border-box; }
+        main #popular_item .popular_item_in .item img {
+          width: 100%; }
+        main #popular_item .popular_item_in .item span {
+          letter-spacing: -0.01rem; }
+  @media (min-width: 550px) {
+    main #popular_item .title {
+      width: 50%;
+      display: block;
+      margin: 0 auto;
+      padding: 20px 0;
+      width: 30%; }
+    main #popular_item .popular_item_in {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between; }
+      main #popular_item .popular_item_in .item {
+        width: 33%;
+        background: #fff;
+        padding: 2%;
+        margin-bottom: 0.5%;
+        box-sizing: border-box; }
+        main #popular_item .popular_item_in .item img {
+          width: 100%; }
+        main #popular_item .popular_item_in .item span {
+          letter-spacing: 0; } }
+  main #shopping_guide {
+    width: 100%;
+    height: auto;
+    display: block;
+    background: #f9f8f6;
+    letter-spacing: 0;
+    margin-bottom: 2rem; }
+    main #shopping_guide .title {
+      width: 50%;
+      display: block;
+      margin: 0 auto;
+      padding: 20px 0; }
+    main #shopping_guide h3 {
+      font-size: 1.6rem;
+      font-weight: bold;
+      color: #887f69;
+      padding-bottom: 5px;
+      letter-spacing: 0.1rem; }
+    main #shopping_guide .shopping_guide_in {
+      width: 100%; }
+      main #shopping_guide .shopping_guide_in dl {
+        line-height: 1.8; }
+        main #shopping_guide .shopping_guide_in dl dt {
+          color: #887f69;
+          font-weight: bold; }
+          main #shopping_guide .shopping_guide_in dl dt dd {
+            letter-spacing: 0 img; }
+      main #shopping_guide .shopping_guide_in .delivery {
+        background: #fff;
+        padding: 10px;
+        margin-bottom: 1rem; }
+      main #shopping_guide .shopping_guide_in .payment {
+        background: #fff;
+        padding: 10px; }
+    @media (min-width: 550px) {
+      main #shopping_guide .title {
+        width: 50%;
+        display: block;
+        margin: 0 auto;
+        padding: 20px 0;
+        width: 30%; }
+      main #shopping_guide .shopping_guide_in {
+        width: 100%;
+        font-size: 14px;
+        font-size: 1.4rem; }
+        main #shopping_guide .shopping_guide_in .delivery {
+          width: 49%;
+          height: 230px;
+          box-sizing: border-box;
+          float: left;
+          margin-right: 2%; }
+        main #shopping_guide .shopping_guide_in .payment {
+          width: 49%;
+          height: 230px;
+          box-sizing: border-box;
+          float: left; } }
+
+#sidebar {
+  background: #f9f8f6; }
+  #sidebar #search {
+    display: block;
+    width: 100%;
+    padding: 0;
+    background: #fff; }
+    #sidebar #search .search_in .title {
+      display: none; }
+    @media (min-width: 550px) {
+      #sidebar #search #search .search_in .title {
+        display: block;
+        width: 87px;
+        height: 10px; } }
+  #sidebar #link, #sidebar #categories {
+    background: #f9f8f6;
+    margin-bottom: 1rem; }
+    #sidebar #link li, #sidebar #categories li {
+      margin-bottom: 0.1rem;
+      background: #fff;
+      padding: 1rem; }
+    #sidebar #link .link_in .title_in, #sidebar #categories .link_in .title_in {
+      background: #887f69;
+      display: flex;
+      justify-content: space-between; }
+      #sidebar #link .link_in .title_in .title, #sidebar #categories .link_in .title_in .title {
+        display: block;
+        padding: 1.4rem; }
+      #sidebar #link .link_in .title_in .next_icon, #sidebar #categories .link_in .title_in .next_icon {
+        width: 8px;
+        height: 14px;
+        background: url("../images/top/next_icon.png") no-repeat;
+        display: block;
+        padding: 5px;
+        margin-top: 12px; }
+    #sidebar #link .link_in .links .next_icon_gray, #sidebar #categories .link_in .links .next_icon_gray {
+      display: block;
+      background: url("../images/top/next_icon_gray.png") no-repeat right; }
+    @media (min-width: 550px) {
+      #sidebar #link li, #sidebar #categories li {
+        font-size: 10px;
+        font-size: 1rem; } }
+  #sidebar #link, #sidebar #categories
+  #about, #sidebar #shop_info {
+    background: #fff;
+    padding-bottom: 1rem; }
+    #sidebar #link .title_in, #sidebar #categories
+    #about .title_in, #sidebar #shop_info .title_in {
+      background: #887f69;
+      width: 100%;
+      margin-bottom: 1rem; }
+      #sidebar #link .title_in .title, #sidebar #categories
+      #about .title_in .title, #sidebar #shop_info .title_in .title {
+        display: block;
+        padding: 1.4rem; }
+    #sidebar #link .about_in, #sidebar #categories
+    #about .about_in, #sidebar #shop_info .about_in {
+      padding: 1rem; }
+      #sidebar #link .about_in .float_in .float, #sidebar #categories
+      #about .about_in .float_in .float, #sidebar #shop_info .about_in .float_in .float {
+        width: 50%;
+        float: left;
+        box-sizing: border-box;
+        padding-right: 1rem; }
+        #sidebar #link .about_in .float_in .float::last-child, #sidebar #categories
+        #about .about_in .float_in .float::last-child, #sidebar #shop_info .about_in .float_in .float::last-child {
+          padding-right: 0; }
+      #sidebar #link .about_in .float_in p, #sidebar #categories
+      #about .about_in .float_in p, #sidebar #shop_info .about_in .float_in p {
+        font-size: 1px;
+        font-size: 0.1rem;
+        letter-spacing: 0.5; }
+      #sidebar #link .about_in .float_in::after, #sidebar #categories
+      #about .about_in .float_in::after, #sidebar #shop_info .about_in .float_in::after {
+        content: '';
+        display: block;
+        clear: both; }
+      #sidebar #link .about_in .more, #sidebar #categories
+      #about .about_in .more, #sidebar #shop_info .about_in .more {
+        display: block;
+        width: 101px;
+        margin-left: 13rem; }
+
+/*# sourceMappingURL=style.css.map */
