@@ -43,7 +43,14 @@ header {
         height: 24px; }
   @media (max-width: 550px) {
     header .nav .pc_nav {
-      display: none; } }
+      display: none; }
+    header .nav .sp_menu {
+      display: none; }
+      header .nav .sp_menu li {
+        display: block;
+        border-bottom: solid 1px #b0b0b0;
+        width: 80%;
+        margin: 0 auto; } }
   @media (min-width: 550px) {
     header .nav {
       text-align: right; }
@@ -87,6 +94,9 @@ main {
         box-sizing: border-box; }
         main #new_item .new_item_in .item img {
           width: 100%; }
+        main #new_item .new_item_in .item p {
+          padding-top: 2%;
+          padding-bottom: 5%; }
         main #new_item .new_item_in .item span {
           letter-spacing: -0.01rem; }
   @media (min-width: 550px) {
@@ -108,6 +118,9 @@ main {
         box-sizing: border-box; }
         main #new_item .new_item_in .item img {
           width: 100%; }
+        main #new_item .new_item_in .item p {
+          font-size: 10px;
+          font-size: 1rem; }
         main #new_item .new_item_in .item span {
           letter-spacing: 0; } }
   main #popular_item {
@@ -215,84 +228,152 @@ main {
 #sidebar {
   background: #f9f8f6; }
   #sidebar #search {
-    display: block;
-    width: 100%;
-    padding: 0;
-    background: #fff; }
+    padding-bottom: 2rem;
+    background: #fff;
+    margin-bottom: 2rem; }
     #sidebar #search .search_in .title {
       display: none; }
-    @media (min-width: 550px) {
-      #sidebar #search #search .search_in .title {
+    #sidebar #search .search_in #searchform {
+      width: 100%;
+      margin: 0;
+      position: relative; }
+      #sidebar #search .search_in #searchform #keywords {
+        width: 90%;
         display: block;
-        width: 87px;
-        height: 10px; } }
-  #sidebar #link, #sidebar #categories {
+        margin: 0 auto;
+        background: #eee; }
+      #sidebar #search .search_in #searchform #searchBtn {
+        width: 16px;
+        height: 16px;
+        position: absolute;
+        top: 10px;
+        right: 50px; }
+    @media (min-width: 550px) {
+      #sidebar #search .search_in .title {
+        display: block;
+        padding-left: 5%;
+        padding-bottom: 0.5rem; }
+      #sidebar #search .search_in #searchform {
+        width: 100%;
+        margin: 0;
+        position: relative; }
+        #sidebar #search .search_in #searchform #keywords {
+          height: 23px;
+          display: block;
+          margin-left: 5%; }
+        #sidebar #search .search_in #searchform #searchBtn {
+          width: 16px;
+          height: 16px;
+          position: absolute;
+          top: 8%;
+          right: 7%; } }
+  #sidebar .link {
     background: #f9f8f6;
     margin-bottom: 1rem; }
-    #sidebar #link li, #sidebar #categories li {
+    #sidebar .link li {
       margin-bottom: 0.1rem;
       background: #fff;
       padding: 1rem; }
-    #sidebar #link .link_in .title_in, #sidebar #categories .link_in .title_in {
+    #sidebar .link .link_in .title_in {
       background: #887f69;
       display: flex;
       justify-content: space-between; }
-      #sidebar #link .link_in .title_in .title, #sidebar #categories .link_in .title_in .title {
+      #sidebar .link .link_in .title_in .title {
         display: block;
         padding: 1.4rem; }
-      #sidebar #link .link_in .title_in .next_icon, #sidebar #categories .link_in .title_in .next_icon {
+      #sidebar .link .link_in .title_in .next_icon {
         width: 8px;
         height: 14px;
         background: url("../images/top/next_icon.png") no-repeat;
         display: block;
         padding: 5px;
         margin-top: 12px; }
-    #sidebar #link .link_in .links .next_icon_gray, #sidebar #categories .link_in .links .next_icon_gray {
-      display: block;
-      background: url("../images/top/next_icon_gray.png") no-repeat right; }
+    #sidebar .link .link_in .links {
+      display: none; }
+      #sidebar .link .link_in .links .next_icon_gray {
+        display: block;
+        background: url("../images/top/next_icon_gray.png") no-repeat right; }
     @media (min-width: 550px) {
-      #sidebar #link li, #sidebar #categories li {
+      #sidebar .link li {
         font-size: 10px;
         font-size: 1rem; } }
-  #sidebar #link, #sidebar #categories
-  #about, #sidebar #shop_info {
+  #sidebar .sub_contents {
     background: #fff;
-    padding-bottom: 1rem; }
-    #sidebar #link .title_in, #sidebar #categories
-    #about .title_in, #sidebar #shop_info .title_in {
+    padding-bottom: 1rem;
+    margin-bottom: 1rem; }
+    #sidebar .sub_contents p {
+      font-size: 10px;
+      font-size: 1rem; }
+    #sidebar .sub_contents .title_in {
       background: #887f69;
       width: 100%;
       margin-bottom: 1rem; }
-      #sidebar #link .title_in .title, #sidebar #categories
-      #about .title_in .title, #sidebar #shop_info .title_in .title {
+      #sidebar .sub_contents .title_in .title {
         display: block;
         padding: 1.4rem; }
-    #sidebar #link .about_in, #sidebar #categories
-    #about .about_in, #sidebar #shop_info .about_in {
-      padding: 1rem; }
-      #sidebar #link .about_in .float_in .float, #sidebar #categories
-      #about .about_in .float_in .float, #sidebar #shop_info .about_in .float_in .float {
+    #sidebar .sub_contents .about_in {
+      padding: 5%; }
+      #sidebar .sub_contents .about_in .more {
+        display: block;
+        margin: 0 auto;
         width: 50%;
-        float: left;
-        box-sizing: border-box;
-        padding-right: 1rem; }
-        #sidebar #link .about_in .float_in .float::last-child, #sidebar #categories
-        #about .about_in .float_in .float::last-child, #sidebar #shop_info .about_in .float_in .float::last-child {
-          padding-right: 0; }
-      #sidebar #link .about_in .float_in p, #sidebar #categories
-      #about .about_in .float_in p, #sidebar #shop_info .about_in .float_in p {
-        font-size: 1px;
-        font-size: 0.1rem;
-        letter-spacing: 0.5; }
-      #sidebar #link .about_in .float_in::after, #sidebar #categories
-      #about .about_in .float_in::after, #sidebar #shop_info .about_in .float_in::after {
-        content: '';
-        display: block;
-        clear: both; }
-      #sidebar #link .about_in .more, #sidebar #categories
-      #about .about_in .more, #sidebar #shop_info .about_in .more {
-        display: block;
-        width: 101px;
-        margin-left: 13rem; }
+        margin-top: 5%; }
+    @media (max-width: 550px) {
+      #sidebar .sub_contents .about_in {
+        padding: 1rem; }
+        #sidebar .sub_contents .about_in .float_in .float {
+          width: 50%;
+          float: left;
+          box-sizing: border-box;
+          padding-right: 1rem; }
+          #sidebar .sub_contents .about_in .float_in .float::last-child {
+            padding-right: 0; }
+        #sidebar .sub_contents .about_in .float_in p {
+          font-size: 1px;
+          font-size: 0.1rem;
+          letter-spacing: 0.5; }
+        #sidebar .sub_contents .about_in .float_in::after {
+          content: '';
+          display: block;
+          clear: both; }
+        #sidebar .sub_contents .about_in .more {
+          margin-left: 50%;
+          width: 30%;
+          margin-top: 0; } }
+
+footer {
+  background: #f9f8f6;
+  padding-bottom: 6rem; }
+  footer .footer_in {
+    text-align: center; }
+    footer .footer_in .pgtop_btn {
+      padding: 2rem;
+      margin: 0 auto; }
+    footer .footer_in ul {
+      border-top: solid 1px #b0b0b0;
+      padding-top: 0.5rem; }
+      footer .footer_in ul li {
+        font-size: 10px;
+        font-size: 1rem;
+        display: inline-block; }
+    footer .footer_in p {
+      font-size: 8px;
+      font-size: 0.8rem;
+      color: #e2ddd4; }
+  @media (min-width: 550px) {
+    footer .footer_in .pgtop_btn {
+      margin-left: 80%; }
+    footer .footer_in ul {
+      border-top: solid 1px #b0b0b0;
+      padding-top: 0.5rem;
+      padding-bottom: 2rem; }
+      footer .footer_in ul li {
+        font-size: 10px;
+        font-size: 1rem;
+        display: inline-block; }
+    footer .footer_in p {
+      font-size: 8px;
+      font-size: 0.8rem;
+      color: #e2ddd4; } }
 
 /*# sourceMappingURL=style.css.map */

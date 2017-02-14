@@ -56,10 +56,18 @@
       </ul><!-- pc_nav -->
       <ul class="sp_nav">
         <!--SP用アイコン3つ横並び -->
-        <li><a href="#"><img src="images/top_sp/menu_icon.png" alt="menu_icon" srcset="images/top_sp/menu_icon@2x.png 2x" /></a></li>
+        <li><a class="click_here" href="#"><img src="images/top_sp/menu_icon.png" alt="menu_icon" srcset="images/top_sp/menu_icon@2x.png 2x" /></a></li>
         <li><a href="#"><img src="images/top_sp/fb.png" alt="facebook" srcset="images/top_sp/fb@2x.png 2x" /></a></li>
         <li><a href="#"><img src="images/top_sp/insta.png" alt="instagram" srcset="images/top_sp/insta@2x.png 2x" /></a></li> 
-      </ul><!-- sp_nav -->
+      </ul>
+        <!--SP用ハンバーガーメニュー -->
+        <ul class="sp_menu">
+        <li><a href="#">LOGIN</a></li>
+        <li><a href="#">CART</a></li>
+        <li><a href="#">MY PAGE</a></li> 
+        <li><a href="#">SHOPPING GUIDE</a></li>
+      </ul>
+      <!-- sp_nav -->
     </div><!-- nav -->
   </div> <!-- row -->
 </div> <!-- header_in -->
@@ -74,10 +82,10 @@
       <div class="nine columns" id='main_area'>
         
       <div class="owl-carousel owl-theme" id="eyecatch">
-            <div><img src="images/top/ca_banner.jpg" alt="eyecatch" width="100%" /></div>
-            <div><img src="images/top/ca_banner.jpg" alt="eyecatch" width="100%" /></div>
-            <div><img src="images/top/ca_banner.jpg" alt="eyecatch" width="100%" /></div>
-            <div><img src="images/top/ca_banner.jpg" alt="eyecatch" width="100%" /> </div>
+            <div><img src="images/top/ca_banner.jpg" alt="eyecatch" /></div>
+            <div><img src="images/top/ca_banner.jpg" alt="eyecatch" /></div>
+            <div><img src="images/top/ca_banner.jpg" alt="eyecatch" /></div>
+            <div><img src="images/top/ca_banner.jpg" alt="eyecatch" /> </div>
       </div>
       <!-- eyecatch area end-->
       
@@ -159,7 +167,7 @@
         <div class="shopping_guide_in">
           <div class="delivery">
             <h3>お届けについて</h3>
-            <div><img class="u-max-full-width" src="images/top/otodoke_banner.png" /></div>
+            <div><img class="u-max-full-width" src="images/top/otodoke_banner.png" alt="お届けについて"/></div>
               <dl>
                 <dt>■○○運輸</dt>
                 <dd>送料¥000円</dd>
@@ -191,28 +199,27 @@
       </div><!-- main area-->
       
        <div class="three columns" id="sidebar">
-<!-- 検索フォーム仮divここから　-->
+<!-- 検索フォームここから　-->
            <div id="search">
-             <div class="search_in">
-             <dl>  
-             　<dt><img class="title" src="images/top/itemserch.png" alt="検索" /></dt>  
-                <dd><form name="search" id="search" method="get" action="#">  
-                 <input name="keywords" id="keywords" value="" type="text" />  
+             <dl class="search_in">  
+              <dt><img class="title" src="images/top/itemserch.png" alt="検索" /></dt>  
+                <dd>
+                  <form name="search" id="searchform" method="get" action="#">  
+                 <input name="keywords" id="keywords" value="" type="text" placeholder="search in..." />  
                  <input type="image" src="images/top/search_icon.png" alt="検索" name="searchBtn" id="searchBtn" />  
-                    </form>
+                  </form>
                 </dd>  
-              </dl>  
+              </dl> 
            </div>
-           </div>
-<!-- 検索フォーム仮divここまで　-->
+<!-- 検索フォームここまで　-->
 <!-- ページリンクここから　-->
-           <div id="link">
+           <div class="link">
              <div class="link_in">
-               <div class="title_in">
-             <img class="title" src="images/top/pagelink.png" alt="ページリンク" />
+               <div class="title_in pg_link_click">
+             <img class="title " src="images/top/pagelink.png" alt="ページリンク" />
              <div class="next_icon"></div>
                </div>
-             <ul class="links">
+             <ul class="links pg_link_here">
                <li><a class="next_icon_gray" href="#">カテゴリー名</a></li>
                <li><a class="next_icon_gray" href="#">カテゴリー名</a></li>
                <li><a class="next_icon_gray" href="#">カテゴリー名</a></li>
@@ -223,13 +230,13 @@
              </div><!-- link_in -->
            </div><!-- link -->
 <!-- ページリンクここまで　-->      
-           <div id="categories">
+           <div class="link">
              <div class="link_in">
-               <div class="title_in">
-             <img class="title" src="images/top/categories.png" alt="ページリンク" />
+               <div class="title_in ca_link_click">
+             <img class="title" src="images/top/categories.png" alt="カテゴリー" />
              <div class="next_icon"></div>
                </div>
-             <ul class="links">
+             <ul class="links ca_link_here">
                <li><a class="next_icon_gray" href="#">カテゴリー名</a></li>
                <li><a class="next_icon_gray" href="#">カテゴリー名</a></li>
                <li><a class="next_icon_gray" href="#">カテゴリー名</a></li>
@@ -240,29 +247,29 @@
              </div><!-- link_in -->
            </div>
 <!-- categoriesここまで　-->  
-           <div id="about">
+           <div class="sub_contents">
              <div class="title_in">
-             <img class="title" src="images/top/about.png" />
+             <img class="title" src="images/top/about.png" alt="about" />
              </div>
              <div class="about_in">
                <div class="float_in">
-               <img class="u-max-full-width float" src="images/top/about_img.jpg" />
+               <img class="u-max-full-width float" src="images/top/about_img.jpg" alt="ショップについて" />
                <p class="float">お店の説明が入ります。お店の説明が入ります。お店の説明が入ります。お店の説明が入ります。お店の説明が入ります。</p>
                </div>
-               <img class="more" src="images/top/more_btn.png" />
+               <img class="more" src="images/top/more_btn.png" alt="more" />
              </div>
            </div>
 <!-- aboutここまで　--> 
-           <div id="shop_info">
+           <div class="sub_contents">
              <div class="title_in">
-             <img class="title"  src="images/top/shop_info.png" />
+             <img class="title"  src="images/top/shop_info.png" alt="shop info" />
              </div>
              <div class="about_in">
                <div class="float_in">
-               <img class="u-max-full-width float" src="images/top/shopinfo_img.jpg" />
+               <img class="u-max-full-width float" src="images/top/shopinfo_img.jpg" alt="店の外観" />
                <p class="float">お店の説明が入ります。お店の説明が入ります。お店の説明が入ります。お店の説明が入ります。お店の説明が入ります。</p>
                </div>
-               <img class="more" src="images/top/more_btn.png" />
+               <img class="more" src="images/top/more_btn.png" alt="more" />
              </div>
            </div>
 <!-- shop_infoここまで　--> 
@@ -277,20 +284,45 @@
   <footer>
     <div class="container">
       <div class="row">
-        <div class="twelve columns">
-          <div class="footer_in">
-            <img src="images/top/pagetop.png" alt="ページ上へ" />
+        <div class="twelve columns footer_in">
+            <a href="#header_in"><img class="pgtop_btn" src="images/top/pagetop.png" alt="ページ上へ" /></a>
             <ul>
               <li><a href="#">特定商取引に基づく表記</a></li>
-              <li><a href="#">プライバシーポリシー</a></li>
-              <li><a href="#">マイページ</a></li>
+              <li><a href="#">・プライバシーポリシー</a></li>
+              <li><a href="#">・マイページ</a></li>
             </ul>
             <p>copyrights(c)APPLE BERRY all rights researved.</p>
-          </div>
         </div>
       </div>
     </div>
     
   </footer>
+   <!-- script ハンバーガーメニュー
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+ <script>
+$(document).ready(function(){
+  $(".click_here").click(function(){
+    $(".sp_menu").slideToggle();
+  });
+});
+</script> 
+
+   <!-- script アコーディオンメニュー
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+ <script>
+$(document).ready(function(){
+  $(".pg_link_click").click(function(){
+    $(".pg_link_here").slideToggle();
+  });
+});
+</script>
+
+ <script>
+$(document).ready(function(){
+  $(".ca_link_click").click(function(){
+    $(".ca_link_here").slideToggle();
+  });
+});
+</script> 
 </body>
 </html>
