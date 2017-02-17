@@ -24,6 +24,7 @@ $red : #9d1a2d;
 h1,h2,h3{
     margin:0;
     padding:0;
+    @include font-size(24);
 }
 
 p,dl,dt,dd,ul,li{
@@ -89,6 +90,7 @@ header{
         }
     }
     
+    
  
 
     
@@ -128,6 +130,9 @@ header{
         .sp_nav{
             display:none;
          }
+         .sp_menu{
+            display:none;
+         }
     
         }
     }
@@ -146,7 +151,7 @@ main{
     letter-spacing:0.2rem;
     
     #eyecatch{
-        display:block;
+        
     }
     
     #new_item{
@@ -157,6 +162,10 @@ main{
             .title{
                 @include title;
                 width:35%;
+            }
+            .title_pc{
+                display: none;
+                padding-top: 2rem;
             }
                 .new_item_in{
                    display:flex;
@@ -192,8 +201,11 @@ main{
     @media(min-width: 550px){
         #new_item{
             .title{
-                @include title;
-                width:20%;
+                display: none;
+            }
+            .title_pc{
+                display:block;
+                padding-bottom: 2rem;
             }
             .new_item_in{
                 display:flex;
@@ -219,6 +231,7 @@ main{
                     
                     span{
                         letter-spacing:0;
+                        @include font-size(10);
                         
                     }
 
@@ -240,6 +253,9 @@ main{
             .title{
                 @include title;
             }
+            .title_pc{
+                display: none;
+            }
                 .popular_item_in{
                    display:flex;
                    flex-wrap: wrap;
@@ -257,6 +273,10 @@ main{
                     img{
                         width: 100%
                     }
+                    p{
+                        padding-top: 2%;
+                         padding-bottom: 5%;
+                    }
                 
                     span{
                         letter-spacing:-0.01rem;
@@ -270,9 +290,12 @@ main{
     @media(min-width: 550px){
         #popular_item{
             .title{
-                @include title;
-                width:30%;
+                display: none;
             }
+            .title_pc{
+                display: block;
+                padding: 2rem;
+          }
             .popular_item_in{
                 display:flex;
                 flex-wrap: wrap;
@@ -290,10 +313,19 @@ main{
                         width: 100%
                 
                     }
+                    p{
+                            @include font-size(10);
+                         
+                        }
+                
+                    
                     
                     span{
                         letter-spacing:0;
+                        @include font-size(10);
+                        
                     }
+
 
 
 
@@ -317,6 +349,10 @@ main{
           .title{
               @include title;
           }
+          .title_pc{
+                display: none;
+           }
+
               h3{
                   font-size:1.6rem;
                   font-weight: bold;
@@ -357,9 +393,13 @@ main{
        //pc
     @media(min-width: 550px){
             .title{
-                @include title;
-                width:30%;
-            }  
+                display: none;
+            }
+            .title_pc{
+                display: block;
+                padding: 2rem;
+           }
+
         .shopping_guide_in{
                width:100%;
                @include font-size(14);
@@ -387,6 +427,11 @@ main{
    }//shopping_guide
 }//main
 
+ /* main areaページ共通部分ここまで
+----------------------------------------*/
+
+ /* sidebarページ共通部分ここまで
+----------------------------------------*/
 #sidebar{
     background:$baseGray1;
 
@@ -397,7 +442,7 @@ main{
            margin-bottom: 2rem;
 
                .search_in{
-                                      
+                     padding-top: 6%;                 
                   .title{
                      display:none;
                   }
@@ -479,13 +524,22 @@ main{
                                    width:8px;
                                    height:14px;
                                    background: url('../images/top/next_icon.png') no-repeat;
-                                   display:block;
+                                   display: block;
                                    padding:5px;
                                    margin-top:12px;
+                                
                                }
 
+
                        }//title_in
-                       
+                       .active .next_icon{                                   width:14px;
+                            height:8px;
+                            background: url('../images/top/down_icon.png') no-repeat;
+                            
+                            padding:5px;
+                            margin-top:12px;
+                                   
+                                 }
                        .links{
                            display: none;
                            .next_icon_gray{
@@ -576,7 +630,11 @@ main{
 
     
  }//sidebar
+ /* sidebarページ共通部分ここまで
+----------------------------------------*/
 
+ /* footerページ共通部分ここから
+----------------------------------------*/
 footer{
     background: $baseGray1;
     padding-bottom: 6rem;
@@ -630,9 +688,140 @@ footer{
         
         
     }
+}//footer
+ /* footerページ共通部分ここまで
+----------------------------------------*/    
     
-    
-    
-}
+ /* Productページ
+----------------------------------------*/    
 
+main{
+    
+    #product_area{
+       
+//パンくずリスト        
+        .breadcrumb{
+    ol{
+        letter-spacing: -.4em;
+        background: $baseGray2;
+                    padding: 2%;
+                    overflow: auto;
+                    zoom:1;
+        li{
+            display: inline-block;
+            letter-spacing:normal;
+            @include font-size(12);
+            margin-right:3%;
+            
+            &:before{
+                content:" / ";
+                color: $subGray2;
+                
+            }
+             &:first-child:before{
+                content: none;
+                
+             }
+            
+            a{
+            color: $subGray2;
 
+            }
+        }
+
+    }
+    
+        }//breadcrumb
+        
+        
+//product
+
+    #product{
+        background: #fff;
+        
+        padding: 10%;
+
+        .product_in{
+            
+            .pro_title_in{
+                padding-bottom: 2%;
+                border-bottom: solid 1px $baseGray2;
+                margin-bottom: 3%;
+                
+                h2{
+                    @include font-size(18);
+                    font-weight: bold;
+                        letter-spacing: 0.2rem;
+                    padding-bottom: 2%;
+                    
+                }
+                span{
+                    color: $subGray1;
+                    
+                }
+            }//product_title_in
+            
+        .product_img{
+            padding-bottom: 2%;
+        }
+        .list_img{
+            display:flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            
+            
+            
+            
+            li{ 
+                width: 18%;
+                box-sizing: border-box;
+                
+            }
+        }            
+            
+     //pc
+    @media(min-width: 550px){
+        .pro_title_in{
+         display : flex;
+         justify-content: space-between;
+         margin-bottom: 5%;
+               
+         h2{
+           @include font-size(16);
+          }
+          span{
+              @include font-size(12);
+          }
+        }
+        .pc_product_in{
+            display: flex;
+            justify-content: space-between;
+            .display_img{
+                width: 70%;
+                box-sizing: border-box;
+                padding-right: 2%;
+            }
+            .list_img{
+                width: 30%;
+                box-sizing: border-box;
+                
+                li{
+                    width: 48%;
+                    box-sizing: border-box;
+                }
+            }
+        }      
+                  
+            
+        }//pc
+            
+
+            
+        
+        }//product_in
+        
+        
+    }//#product
+}//main_area
+
+}//main
