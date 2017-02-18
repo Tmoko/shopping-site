@@ -136,6 +136,7 @@ header{
     
         }
     }
+    
 }
 /*header ページ共通部分ここまで
 ----------------------------------------*/
@@ -149,9 +150,10 @@ main{
     background:$baseGray1;
     line-height:1.2;
     letter-spacing:0.2rem;
+
     
-    #eyecatch{
-        
+    #ca_name{
+        padding-bottom: 2%;
     }
     
     #new_item{
@@ -187,11 +189,13 @@ main{
                     p{
                         padding-top: 2%;
                         padding-bottom: 5%;
+                        @include font-size(12);
                     }
 
                 
                     span{
-                        letter-spacing:-0.01rem;
+                        letter-spacing:-0.001rem;
+                        @include font-size(12);
                         }
                     }
                 }
@@ -460,8 +464,8 @@ main{
                          width: 16px;
                          height: 16px;
                            position: absolute;
-                           top: 10px;
-                           right: 50px;
+                           top: 30%;
+                           right: 8%;
                        }
                    }
                }//search_in
@@ -487,10 +491,10 @@ main{
                            
                        }
                        #searchBtn{
-                         width: 16px;
-                         height: 16px;
+                         width: 13px;
+                         height: 13px;
                            position: absolute;
-                           top: 8%;
+                           top: 15%;
                            right: 7%;
                        }
                    }
@@ -694,12 +698,13 @@ footer{
     
  /* Productページ
 ----------------------------------------*/    
-
 main{
     
-    #product_area{
+
+
+        
        
-//パンくずリスト        
+//パンくずリスト共通ここから        
         .breadcrumb{
     ol{
         letter-spacing: -.4em;
@@ -709,39 +714,50 @@ main{
                     zoom:1;
         li{
             display: inline-block;
+            
             letter-spacing:normal;
             @include font-size(12);
-            margin-right:3%;
             
-            &:before{
+            &:after{
                 content:" / ";
                 color: $subGray2;
-                
+                padding-right: 3%;
             }
-             &:first-child:before{
-                content: none;
-                
-             }
             
+            &:last-child:after{
+                content: none;
+            }
             a{
             color: $subGray2;
-
             }
+
+            
         }
+        
+    .home_icon{
+        background: url('../images/list/home_icon.png') no-repeat;
+       
+        
+        padding-left: 15px;
+        box-sizing: border-box;
+       
+    }
 
     }
     
         }//breadcrumb
-        
+//パンくずリストここまで        
         
 //product
-
+#product_area{
     #product{
         background: #fff;
+        padding: 10% 2% 0;
         
-        padding: 10%;
 
         .product_in{
+            padding-bottom: 2%;
+            border-bottom: solid 1px $baseGray2;
             
             .pro_title_in{
                 padding-bottom: 2%;
@@ -768,19 +784,23 @@ main{
             display:flex;
             flex-wrap: wrap;
             justify-content: space-between;
-            
-            
-            
-            
+
             li{ 
                 width: 18%;
                 box-sizing: border-box;
                 
             }
         }            
-            
-     //pc
-    @media(min-width: 550px){
+
+        }//product_in
+ 
+    }//#product
+    
+//pc
+ @media(min-width: 550px){
+     #product{
+         padding-left: 2%;
+     
         .pro_title_in{
          display : flex;
          justify-content: space-between;
@@ -796,6 +816,7 @@ main{
         .pc_product_in{
             display: flex;
             justify-content: space-between;
+            
             .display_img{
                 width: 70%;
                 box-sizing: border-box;
@@ -814,14 +835,291 @@ main{
                   
             
         }//pc
+        
+ }
+//pro_orderここから
+    #pro_order{
+        background: #fff;
+        padding: 3%;
+        h3{
+            @include font-size(18);
+            font-weight: bold;
+            color:$subGray2;
+            letter-spacing: 0.1rem;
+            margin: 4% 0 8% 0;
+        }
+        .cs{
+            width:100%;
+            table,td,th{
+                border:solid 1px $baseGray2;
+                text-align: center;
+                padding: 3%;
+                
+            }
             
 
+            th{
+                background: $baseGray1;
+                color: $subGray2;
+                font-weight: normal;
+            }
+            td{
+                background: #fff;
+                input{
+                    margin: 0;
+                }
+            }
+        }
+        
+        .border{
+            border-bottom: solid 1px $baseGray2;
+        }
+        .align{
+            margin: 0;
+            padding: 5% 0 5%;
             
+            li{
+                display: inline-block; 
+                padding-right: 10%;
+            
+            p {
+                @include font-size(20);
+                color: $red;
+                font-style: italic;
+                    span{
+                        color: #000;
+                        @include font-size(12);
+                    }
+                }
+            }
+            form{
+                width: 0;
+                margin: 0;
+                input{
+                margin: 0;
+                padding:0;
+                }
+            }
+        }
         
-        }//product_in
+        .q_style{
+            li{
+                padding-right: 3%;
+            }
+            input{
+                border-radius: 0;
+                
+
+            }
+        }
         
+        .or_btn{
+            text-align:center;
+            margin-top:5%;
+        }
+
+
+
+   //pc
+    @media(min-width:550px){
+        .pc_float{
+            width:100%;
+
+           .pc_float_in{
+               float:left;
+               display: block;
+               width:50%;
+ 
+           }
+           .pc_float_in2{
+               float:right;
+               display: block;
+               width:50%;
+               .or_btn{
+                   text-align: right;
+               }
+           }
+           
+           &::after{
+               content: "";
+               display: block;
+               clear: both;
+           }
+        }
+
+    }//pc
+   
+    }//#pro_order
+
+        #pro_desc{
+            padding: 2%;
+            background: #fff;
+            h2{
+                @include font-size(18);
+                font-weight: bold;
+                color: $subGray2;
+                border-bottom: solid 1px $subGray2;
+                padding: 5% 0 5%;
+                margin-bottom: 5%;
+            }
+            h3{
+                @include font-size(18);
+                font-weight: bold;
+                color: $subGray2;
+                padding-bottom: 5%;
+            }
+            
+            table{
+                width: 100%;
+                border:solid 1px $baseGray2;
+                @include font-size(12);
+                color: $subGray2;
+                th{
+                    font-weight: normal;
+                    text-align: center;
+                    border:solid 1px $baseGray2;
+                    background: $baseGray1;
+                    width: 30%;
+                }
+                td{
+                    padding: 5%;
+                    
+                    
+                    
+                }
+            }//table
+            
+        //pc
+        @media(min-width:550px){
+            table{
+                th{
+                    padding: 1rem;
+                }
+                td{
+                    padding: 0;
+                }
+            }
+        }
+    }//#pro_desc 
+}//product_area   
+
+//最近見た商品ここから
+    #recent_item{
+        width:100%;
+        display:block;
+        background: $baseGray1;
         
-    }//#product
-}//main_area
+            .title{
+                @include title;
+                width:35%;
+            }
+            .title_pc{
+                display: none;
+                padding-top: 2rem;
+            }
+                .recent_item_in{
+                   display:flex;
+                   flex-wrap: wrap;
+                   justify-content: space-between;
+               
+            
+                    .item{
+                        width:49%;
+                        height:auto;
+                        background: #fff ;
+                        padding:2% 2% 4%;
+                        margin-bottom:2%;
+                        box-sizing:border-box;
+                
+                    img{
+                        width: 100%
+                    }
+                    p{
+                        padding-top: 2%;
+                        padding-bottom: 5%;
+                        @include font-size(12);
+                    }
+
+                
+                    span{
+                        
+                        letter-spacing:-0.001rem;
+                        @include font-size(12);
+                        }
+                    }
+                }
+        }//recent_item
+        
+        //pc
+    @media(min-width: 550px){
+        #recent_item{
+            .title{
+                display: none;
+            }
+            .title_pc{
+                display:block;
+                padding-bottom: 2rem;
+            }
+            .recent_item_in{
+                display:flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+               
+            
+                .item{
+                    width:33%;
+                    background: #fff;
+                    padding:2%;
+                    margin-bottom:0.5%;
+                    box-sizing:border-box;
+         
+                    img{
+                        width: 100%
+                    }
+                        p{
+                            @include font-size(10);
+                        }
+                
+                    
+                    
+                    span{
+                        letter-spacing:0;
+                        @include font-size(10);
+                        
+                        
+                    }
+
+
+
+                 }
+
+            }
+        }//pc_recent_item
+    }//pc
+//最近見た商品ここまで
 
 }//main
+
+ /* categoriesページ
+----------------------------------------*/    
+#main_area{
+
+    .nextbtn{
+        margin-top: 8%;
+        display: flex;
+        justify-content: space-between;
+        
+        .btn{
+            
+            @include font-size(14);
+            width: 100px;
+            text-align: center;
+            color: #fff;
+            font-weight: bold;
+            padding:10%;
+            background: $subGray2;
+        }
+    
+      }
+  
+}
