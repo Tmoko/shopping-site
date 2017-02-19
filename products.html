@@ -102,9 +102,9 @@
       <span>fa0001-91</span>
     </div>
     <div class="pc_product_in">
-      <div class="display_img">
-      <img class="u-max-full-width " src="images/products/pro_img_01.jpg" alt="商品名" />
-      </div>
+      
+      <img class="u-full-width display_img" src="images/products/pro_img_01.jpg" alt="商品名" />
+      
       <ul class="list_img">
         <li><img class="u-max-full-width"  src="images/products/pro_img_01.jpg" alt="カテゴリーアイテム１"/></li>
         <li><img class="u-max-full-width"  src="images/products/pro_img_02.jpg" alt="カテゴリーアイテム２"/></li>
@@ -410,8 +410,8 @@ $(window).load(function()
   $(function() {
   $(".list_img img").click(function(){
     var img_src = $(this).attr("src");
-       $('.display_img img').fadeOut(function(){
-        ($('.display_img img').attr("src",img_src)).fadeIn();
+       $('.display_img').fadeOut(function(){
+        ($('.display_img').attr("src",img_src)).fadeIn();
       });
       return false;
     })

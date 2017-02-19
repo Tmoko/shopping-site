@@ -487,16 +487,17 @@ main #product_area #product {
       justify-content: space-between; }
       main #product_area #product .pc_product_in .display_img {
         width: 70%;
+        height: 70%;
         box-sizing: border-box;
         padding-right: 2%; }
-        main #product_area #product .pc_product_in .display_img img {
-          width: 100%; }
       main #product_area #product .pc_product_in .list_img {
         width: 30%;
         box-sizing: border-box; }
         main #product_area #product .pc_product_in .list_img li {
           width: 48%;
-          box-sizing: border-box; } }
+          box-sizing: border-box; }
+          main #product_area #product .pc_product_in .list_img li img {
+            width: 92%; } }
 main #product_area #pro_order {
   background: #fff;
   padding: 3%; }
@@ -667,6 +668,14 @@ main #recent_item {
 
  /* categoriesページ
 ----------------------------------------*/
+#ca_area #ca_name .pc {
+  display: none; }
+@media (min-width: 550px) {
+  #ca_area #ca_name .sp {
+    display: none; }
+  #ca_area #ca_name .pc {
+    display: block; } }
+
 .nextbtn {
   margin-top: 8%;
   display: flex;

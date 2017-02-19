@@ -818,11 +818,10 @@ main{
             
             .display_img{
                 width: 70%;
+                height: 70%;
                 box-sizing: border-box;
                 padding-right: 2%;
-                img{
-                    width: 100%;
-                }
+
             }
             .list_img{
                 width: 30%;
@@ -831,6 +830,11 @@ main{
                 li{
                     width: 48%;
                     box-sizing: border-box;
+                    
+                    
+                    img{
+                        width:92%;
+                    }
                 }
             }
         }      
@@ -1104,7 +1108,22 @@ main{
 
  /* categoriesページ
 ----------------------------------------*/    
-
+#ca_area{
+    #ca_name{
+        .pc{
+            display: none;
+        }
+        
+    @media(min-width: 550px){
+        .sp{
+            display: none;
+        }
+        .pc{
+            display:block;
+        }
+        }
+    }
+}
 
     .nextbtn{
         margin-top: 8%;
