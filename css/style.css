@@ -234,18 +234,16 @@ main {
       main #shopping_guide .shopping_guide_in {
         width: 100%;
         font-size: 14px;
-        font-size: 1.4rem; }
+        font-size: 1.4rem;
+        display: flex;
+        justify-content: space-between; }
         main #shopping_guide .shopping_guide_in .delivery {
           width: 49%;
-          height: 230px;
-          box-sizing: border-box;
-          float: left;
-          margin-right: 2%; }
+          margin-bottom: 0;
+          box-sizing: border-box; }
         main #shopping_guide .shopping_guide_in .payment {
           width: 49%;
-          height: 230px;
-          box-sizing: border-box;
-          float: left; } }
+          box-sizing: border-box; } }
 
  /* main areaページ共通部分ここまで
 ----------------------------------------*/
@@ -492,12 +490,14 @@ main #product_area #product {
         padding-right: 2%; }
       main #product_area #product .pc_product_in .list_img {
         width: 30%;
-        box-sizing: border-box; }
+        box-sizing: border-box;
+        justify-content: flex-start; }
         main #product_area #product .pc_product_in .list_img li {
-          width: 48%;
-          box-sizing: border-box; }
+          width: 46%;
+          box-sizing: border-box;
+          padding-bottom: 2%; }
           main #product_area #product .pc_product_in .list_img li img {
-            width: 92%; } }
+            width: 90%; } }
 main #product_area #pro_order {
   background: #fff;
   padding: 3%; }

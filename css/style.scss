@@ -407,21 +407,21 @@ main{
         .shopping_guide_in{
                width:100%;
                @include font-size(14);
+               display: flex;
+               justify-content: space-between;
            
                .delivery{
                    width:49%;
-                   height:230px;
+                   margin-bottom: 0;
                    box-sizing:border-box;
-                   float:left;
-                   margin-right:2%;
 
                
                }
                .payment{
                    width:49%;
-                   height:230px;
+                   
                    box-sizing:border-box;
-                   float:left;
+                   
                    
                   
 
@@ -780,6 +780,7 @@ main{
         .list_img{
             display:flex;
             flex-wrap: wrap;
+             
             justify-content: space-between;
              
 
@@ -826,14 +827,16 @@ main{
             .list_img{
                 width: 30%;
                 box-sizing: border-box;
+                justify-content: flex-start;
                 
                 li{
-                    width: 48%;
+                    width: 46%;
                     box-sizing: border-box;
+                    padding-bottom: 2%;
                     
                     
                     img{
-                        width:92%;
+                        width:90%;
                     }
                 }
             }
