@@ -432,11 +432,12 @@ main .breadcrumb ol {
     main .breadcrumb ol li:after {
       content: " / ";
       color: #887f69;
-      padding-right: 3%; }
+      padding-right: 5px; }
     main .breadcrumb ol li:last-child:after {
       content: none; }
     main .breadcrumb ol li a {
-      color: #887f69; }
+      color: #887f69;
+      padding-right: 5px; }
   main .breadcrumb ol .home_icon {
     background: url("../images/list/home_icon.png") no-repeat;
     padding-left: 15px;
@@ -488,6 +489,8 @@ main #product_area #product {
         width: 70%;
         box-sizing: border-box;
         padding-right: 2%; }
+        main #product_area #product .pc_product_in .display_img img {
+          width: 100%; }
       main #product_area #product .pc_product_in .list_img {
         width: 30%;
         box-sizing: border-box; }
@@ -664,18 +667,21 @@ main #recent_item {
 
  /* categoriesページ
 ----------------------------------------*/
-#main_area .nextbtn {
+.nextbtn {
   margin-top: 8%;
   display: flex;
   justify-content: space-between; }
-  #main_area .nextbtn .btn {
+  .nextbtn .btn {
     font-size: 14px;
     font-size: 1.4rem;
     width: 100px;
     text-align: center;
     color: #fff;
     font-weight: bold;
-    padding: 10%;
+    padding: 5%;
     background: #887f69; }
+  @media (min-width: 550px) {
+    .nextbtn .btn {
+      padding: 2%; } }
 
 /*# sourceMappingURL=style.css.map */

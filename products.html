@@ -87,7 +87,7 @@
 <!-- breadcrumb -->        
         <div class="breadcrumb">
           <ol>
-            <li class="home_icon"><a href="index.html">HOME</a></li>
+            <li><a  class="home_icon" href="index.html">HOME</a></li>
             <li><a href="categories.html">カテゴリー名</a></li>
             <li><a href="products.html">商品名</a></li>
           </ol>
@@ -111,11 +111,11 @@
         <li><img class="u-max-full-width"  src="images/products/pro_img_03.jpg" alt="カテゴリーアイテム３"/></li>
         <li><img class="u-max-full-width"  src="images/products/pro_img_04.jpg" alt="カテゴリーアイテム４"/></li>
         <li><img class="u-max-full-width"  src="images/products/pro_img_05.jpg" alt="カテゴリーアイテム５"/></li>
-        <li><img class="u-max-full-width"  src="images/products/gray_pro_img.jpg" alt="カテゴリーアイテム５"/></li>
-        <li><img class="u-max-full-width"  src="images/products/gray_pro_img.jpg" alt="カテゴリーアイテム５"/></li>
-        <li><img class="u-max-full-width"  src="images/products/gray_pro_img.jpg" alt="カテゴリーアイテム５"/></li>
-        <li><img class="u-max-full-width"  src="images/products/gray_pro_img.jpg" alt="カテゴリーアイテム５"/></li>
-        <li><img class="u-max-full-width"  src="images/products/gray_pro_img.jpg" alt="カテゴリーアイテム５"/></li>
+        <li><img class="u-full-width"  src="images/products/gray_pro_img.jpg" alt="カテゴリーアイテム５"/></li>
+        <li><img class="u-full-width"  src="images/products/gray_pro_img.jpg" alt="カテゴリーアイテム５"/></li>
+        <li><img class="u-full-width"  src="images/products/gray_pro_img.jpg" alt="カテゴリーアイテム５"/></li>
+        <li><img class="u-full-width"  src="images/products/gray_pro_img.jpg" alt="カテゴリーアイテム５"/></li>
+        <li><img class="u-full-width"  src="images/products/gray_pro_img.jpg" alt="カテゴリーアイテム５"/></li>
       </ul>
     </div><!-- pc_product_in -->
   </div><!-- #product_in -->
@@ -359,19 +359,18 @@
 　<!-- Footer共通ここまで
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->  
   
-   <!-- script ハンバーガーメニュー
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
- <script>
+
+
+<script>
+// script ハンバーガーメニュー
 $(document).ready(function(){
   $(".click_here").click(function(){
     $(".sp_menu").slideToggle();
   });
 });
-</script> 
 
-   <!-- script アコーディオンメニュー
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
- <script>
+
+ // script アコーディオンメニュー
 $(document).ready(function(){
     $(".pg_link_click").click(function() {
   $(this).toggleClass("active");
@@ -383,12 +382,10 @@ $(document).ready(function(){
   });
 
   });
-</script>
 
 
-<!--ページ上にスムーズスクロール 
-–––––––––––––––––––––––––––––––––––––––––––––––––– -->
-<script>
+
+//ページ上にスムーズスクロール 
   $(function(){
     // #始まるアンカーをクリックした場合に処理
     $('a[href^=#top]').click(function(){
@@ -405,6 +402,23 @@ $(document).ready(function(){
       return false;
     });
   });
+
+
+//スライドショー
+$(window).load(function()
+{
+  $(function() {
+  $(".list_img img").click(function(){
+    var img_src = $(this).attr("src");
+       $('.display_img img').fadeOut(function(){
+        ($('.display_img img').attr("src",img_src)).fadeIn();
+      });
+      return false;
+    })
+  });
+  
+});
+
 </script>
 </body>
 </html>
